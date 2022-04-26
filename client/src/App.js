@@ -16,8 +16,8 @@ function App() {
             	<Route exact path = "/dogs/create" component = {CreateDog}/>
             	<Route path = "/dogs/:id" component = {Detail}/>
 		<Route path ="*" component={Error404}/>
-			  </Switch>
-		  </div>   
+	  </Switch>
+	</div>   
     </BrowserRouter>
   );
 }
