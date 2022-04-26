@@ -101,6 +101,14 @@
     color: #1883ba;
     background-color: #ffffff;
 }
+
+.cardcontainer{
+    display:"flex";
+    flex-wrap:"wrap";
+    justify-content: center;
+    width: 100%;
+}
+
 /* .link:active{
     color: white;
 } */

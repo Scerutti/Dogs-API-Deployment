@@ -158,7 +158,7 @@ function Home() {
                 </div> 
                 <br/>
 
-                <div style={{display:"flex",flexWrap:"wrap"}}>
+                <div className={s.cardcontainer}>
                 {currentDog.length === 0 ? <img className={s.imagen} alt= {"Loading"} src={carga}/>: 
 
                         currentDog?.map((el,index) => {
