@@ -5,7 +5,7 @@ import s from "./LandingPage.module.css"
 export default function LandingPage () {
     return (
         <div className={s.landing} >
-            <h1 className={s.h1} >Welcome to Salchi page!</h1>
+            <h1 className={s.h1} >Welcome to Doggies page!</h1>
             <Link to= "/home">
                 <button className={s.btn2}>Let's go ...</button>
             </Link>

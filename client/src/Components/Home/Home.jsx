@@ -157,29 +157,29 @@ function Home() {
 
                 </div> 
                 <br/>
-                {currentDog.length === 0 ? <img  alt= {"Loading"} src={carga}/>: 
 
+                <div style={{display:"flex",flexWrap:"wrap"}}>
+                {currentDog.length === 0 ? <img className={s.imagen} alt= {"Loading"} src={carga}/>: 
 
-                currentDog?.map((el,index) => {
-                    //console.log(el)
-                    return (
-                        <div key={index}>
-                           
-                                <Card
-                                    id={el.id}
-                                    name={el.name}
-                                    image={el.image ? el.image : el.image}
-                                    maxWeight={el.maxWeight}
-                                    minWeight={el.minWeight}
-                                    minHeight={el.minHeight}
-                                    maxHeight={el.maxHeight}
-                                    temperament={el.temperament}
-                                    temperaments={el.temperaments?.map((t) => t.name).join(', ')}
-                                />
-                        </div>
-                    )
-                })
-                }
+                        currentDog?.map((el,index) => {
+                            //console.log(el)
+                            return (
+                                        <Card
+                                            key={index}
+                                            id={el.id}
+                                            name={el.name}
+                                            image={el.image ? el.image : el.image}
+                                            maxWeight={el.maxWeight}
+                                            minWeight={el.minWeight}
+                                            minHeight={el.minHeight}
+                                            maxHeight={el.maxHeight}
+                                            temperament={el.temperament}
+                                            temperaments={el.temperaments?.map((t) => t.name).join(', ')}
+                                        />
+                            )
+                        })
+                        }
+                </div>
                 
                     <div className={s.pag} >
                     <Paginado

@@ -2,7 +2,7 @@
 .card{
     padding-right: 20px;
     width: 20vw;
-    height: 50vh;
+    /* height: 50vh; */
     float: left;
     /* margin: 20px 20px 5px 20px; */
     margin: 20px;
@@ -10,7 +10,9 @@
     border-radius: 31px;
     /* box-shadow: -15px -13px 21px 0px #b9c5c3 inset;*/
     box-shadow: 4px 5px 23px 3px rgba(216, 213, 213, 0.748) inset;
-
+    text-decoration: none;
+    display: block;
+    overflow:hidden;
 }
 
 /* .car:hover{
@@ -49,4 +51,5 @@
 
 .link{
     text-decoration: none;
+    display: block;
 }
