@@ -1,0 +1,113 @@
+
+.fondo{
+    background-image: url(../../img/fondo-posible.jpg);
+    background-repeat: repeat;
+    max-width: 100%;
+    height:144vh; 
+    padding-top: 5px;
+}
+
+.container{
+    display: flex;
+}
+
+.textofiltro{
+    font-size: 17px;
+    padding: 3px;
+    margin: 5px;
+    color:grey;
+    background-color: #b4cce4 ;
+    border-radius: 5px;
+}
+
+.textofiltroselect{
+    justify-content:space-around;
+    border-radius: 5px;
+    color:#2471A3;
+    padding-top: 6px;
+    font-size-adjust: none;
+    padding-left: 5px;
+    text-align:start;
+}
+
+.nav{
+    justify-content:space-between;
+    display: flex;
+}
+
+.btn {
+    font-size: 15px;
+    text-decoration: none;
+    width: 180px;
+    height: 60px;
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid #91C9FF;
+    outline: none;
+    transition: 1s ease-in-out;
+}
+
+.botonreload{
+    cursor: pointer;
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 15px;
+    color: #ffffff;
+    background-color:  #2471A3 ;
+    border-radius: 80px;
+    border: 2px solid #85929E ;
+}
+
+.botonreload:hover{
+    color: #1883ba;
+    background-color: #ffffff;
+}
+
+.pag{
+    width: 100%;
+    height: 10vh;
+    position: bottom;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    cursor: pointer;
+}
+
+.h1{
+    display:inline-block;
+    color:#ffffff ;
+    font-family:'Times New Roman', Times, serif;
+    text-decoration-line: underline overline;
+}
+
+.link{
+    outline:none;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    color: #ffffff;
+    border-radius: 80px;
+    font-size: 15px;
+    border: 2px solid #85929E ;
+}
+
+.link:link, .link:visited, .link.focus {                /* Para mantener el estilo aunque ya se haya visitado*/
+    background: #2471A3;
+} 
+
+.link:hover{
+    color: #1883ba;
+    background-color: #ffffff;
+}
+/* .link:active{
+    color: white;
+} */
+
+/* .container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+} */
