@@ -64,20 +64,20 @@ export default function rootReducer(state = initialState, action) {
             }                
         case ORDER_BY_NAME:
         let ordenado = action.payload === "az" ? state.dogs.sort(function (a, b) {
-            if (a.name > b.name) {
+            if (a.name.toLowerCase() > b.name.toLowerCase()) {
                 return 1;
             }
-            if (b.name > a.name) {
+            if (b.name.toLowerCase() > a.name.toLowerCase()) {
                 return -1;
             } 
             return 0
             /* return a.name - b.name; */
         }) :
             state.dogs.sort(function (a, b) {
-                if (a.name > b.name) {
+                if (a.name.toLowerCase() > b.name.toLowerCase()) {
                     return -1;
                 }
-                if (b.name > a.name) {
+                if (b.name.toLowerCase() > a.name.toLowerCase()) {
                     return 1
                 }
                 return 0
