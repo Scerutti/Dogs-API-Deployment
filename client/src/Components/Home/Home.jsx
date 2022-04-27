@@ -119,7 +119,7 @@ function Home() {
                 <br />
 
                 <div>
-                    <span className={s.textofiltro} > Filter by weight  </span>
+                    <span className={s.textofiltro} > Sort by weight  </span>
 
                     <select value={ordenPorPeso} className={s.textofiltroselect} onChange={e => handleSortWeight(e)}>
                         <option value=""> ----- </option>
@@ -127,7 +127,7 @@ function Home() {
                         <option value="desc"> Heaviest</option>
                     </select>
 
-                    <span className={s.textofiltro} > Filter by order </span>
+                    <span className={s.textofiltro} > Sort by order </span>
                     <select value={ordenNormal} className={s.textofiltroselect}  onChange={e => handleSort(e)}>
                         <option value=""> --- </option>
                         <option value="az"> A-Z</option>
@@ -181,15 +181,16 @@ function Home() {
                         }
                 </div>
                 
-                    <div className={s.pag} >
+                    {/* <div className={s.pag} > */}
                     <Paginado
                         dogsPerPage={dogsPerPage}
                         allDogs={allDogs.length}
                         paginado={paginado}
                         paginadoPrev={paginadoPrev}
                         paginadoNext={paginadoNext}
+                        currentPage={currentPage}
                     />
-                </div>
+                {/* </div> */}
 
             </div>
         </div>

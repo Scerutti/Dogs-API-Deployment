@@ -7,7 +7,7 @@ alldogs --> son todos los perros
 paginado --> pageNumber => setCurrentPage(pageNumber)
 */
 
-export default function Paginado ({dogsPerPage, allDogs, paginado, paginadoPrev,paginadoNext}) {
+export default function Paginado ({dogsPerPage, allDogs, paginado, paginadoPrev,paginadoNext, currentPage}) {
     const pageNumbers = []
 
     for (let i = 1; i <= Math.ceil(allDogs/dogsPerPage); i++){
@@ -15,17 +15,17 @@ export default function Paginado ({dogsPerPage, allDogs, paginado, paginadoPrev,
     }
     return (
         <nav>
-            <ul className = {s.pagination}>
-                <li className={s.prevnext} onClick={paginadoPrev} >«</li>
+            <div className = {s.pagination}>
+                <div className={s.number} onClick={paginadoPrev} >«</div>
                 {pageNumbers?.map(number => (
-                    <li key={number}>
-                        <div className={s.number} onClick = {() => paginado(number)}>
+                    
+                        <div className={ currentPage === number ? s.pageActual : s.number} onClick = {() => paginado(number)}>
                             {number}
                         </div>
-                    </li>
+                    
                 ))} 
-                <li className={s.prevnext} onClick={paginadoNext} >»</li>
-                </ul>
+                <div className={s.number} onClick={paginadoNext} >»</div>
+            </div>
         </nav>
     ) 
 }
