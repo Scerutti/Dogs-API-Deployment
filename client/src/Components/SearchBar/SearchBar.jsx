@@ -6,7 +6,7 @@ import { getNameDog} from '../../Redux/Actions';
 import s from "./SearchBar.module.css"
 
 
-export default function SearchBar () {
+export default function SearchBar ({setCurrentPage}) {
     const dispatch = useDispatch()
     const [name, setName] = useState('')
 
@@ -14,6 +14,7 @@ function handleInputChange (e) {
     e.preventDefault();
     setName(e.target.value);
     //console.log(name)
+    setCurrentPage(1)
 }
 //guardo lo que va tipeando el usuario en mi estado local, y eso es lo que le llega al back como peticion
 

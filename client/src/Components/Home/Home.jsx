@@ -25,7 +25,6 @@ function Home() {
     const currentDog = allDogs.slice(numberOfFirtsDog, numbersOfLastDog)
     const paginado = (pageNumber) => {
         setCurrentPage(pageNumber)
-      
     }
     /*
                         dogsPerPage={dogsPerPage}
@@ -107,7 +106,9 @@ function Home() {
         <div className={s.fondo}>
             <div className={s.nav}>
                 <button className={s.botonreload} onClick={e => handleClick(e)}> Reload dogs </button>
-                <SearchBar />
+                <SearchBar 
+                    setCurrentPage={setCurrentPage}
+                />
 
             </div>
 
@@ -129,7 +130,7 @@ function Home() {
 
                     <span className={s.textofiltro} > Sort by order </span>
                     <select value={ordenNormal} className={s.textofiltroselect}  onChange={e => handleSort(e)}>
-                        <option value=""> --- </option>
+                        <option value="---"> --- </option>
                         <option value="az"> A-Z</option>
                         <option value="za"> Z-A </option>
                     </select>

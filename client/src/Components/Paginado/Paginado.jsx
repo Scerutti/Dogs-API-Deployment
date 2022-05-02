@@ -18,11 +18,9 @@ export default function Paginado ({dogsPerPage, allDogs, paginado, paginadoPrev,
             <div className = {s.pagination}>
                 <div className={s.number} onClick={paginadoPrev} >«</div>
                 {pageNumbers?.map(number => (
-                    
                         <div className={ currentPage === number ? s.pageActual : s.number} onClick = {() => paginado(number)}>
                             {number}
                         </div>
-                    
                 ))} 
                 <div className={s.number} onClick={paginadoNext} >»</div>
             </div>

@@ -44,8 +44,8 @@ function validate(input) {
     } else if (Number(input.maxHeight) <= 0 || Number(input.maxHeight) < Number(input.minHeight) || Number(input.maxHeight) > 100) {
         errors.maxHeight = 'Write a number beetwen 0- 100'
     }
-    if (!input.temperaments){
-        errors.temperaments="Select at least 1 temperament"
+    if (!input.temperament.length){
+        errors.temperament="Select at least 1 temperament"
     }
     return errors
 }
@@ -80,7 +80,7 @@ export default function PostDog() {
             [e.target.name]: e.target.value
         }))
     }
-
+    
 
     function handleSelect(e) {      //manejo del select de temperamenteos
         if (input.temperament.includes(e.target.value)) {
@@ -101,7 +101,7 @@ export default function PostDog() {
     }
 
     function handleSubmit(e) {      //manejo ante submit de una nueva breed
-        if (input.name && input.life_span && input.minWeight && input.maxWeight && input.minHeight && input.maxHeight && input.image && input.temperament){
+        if (input.name && input.life_span && input.minWeight && input.maxWeight && input.minHeight && input.maxHeight && input.image && input.temperament && input.temperament.length>0){
             e.preventDefault();
             dispatch(createDog({
                 ...input, 
@@ -255,10 +255,10 @@ export default function PostDog() {
                     <select  onChange={(e) => handleSelect(e)}>
                         {temperaments?.map((el,i) => (<option value={`${el.id},${el.name}`} key={el.id}
                         >{el.name}</option>))}
-                         {errors.temperaments && (
-                            <p className = 'error'>{errors.temperaments}</p>
-                        )}  
                     </select>
+                         {errors.temperament && (
+                            <p className = 'error'>{errors.temperament}</p>
+                        )}  
                     <div className={s.tempcontrol} >
                         {input.temperament.map((el,i ) =><button type='reset'  onClick={() => handleDelete(el)} className={s.x} > {el.name} X </button>)}
                     </div>
