@@ -5,7 +5,7 @@ Es una aplicación web creada como proyecto individual para el bootcamp <a href=
  
 ## 💻 Se puede ver en vivo?
 Visita la demo clickeando el siguiente link:\
-https://pi-dogs-henry-three.vercel.app/
+https://doggies-page.vercel.app/
  
 ## 🧱 Cuál fue el stack tecnológico? 
 Estas son las tecnologías que usé para crear el proyecto completo:
